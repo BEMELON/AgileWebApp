@@ -6,20 +6,46 @@
    {% if name and email %}
         <style>
             #profile_picture{
-                padding:150px;
+                position:absolute;
                 float:left;
-                margin-left:-200px;
-                padding-top:100px;
+                left:80px;
+                top:100px;
+                padding:100px;
             }
             #name{
-                font-size:20px;
+                position:absolute;
+                left:500px;
+                top:0px;
+                font-size:30px;
                 font-weight:bold;
-                padding-top:90px;
+                padding-top:200px;
             }
             #email{
-                font-size:20px;
+                position:absolute;
+                top:270px;
+                left:500px;
+                font-size:30px;
                 font-weight:bold;
-                padding-top:30px;
+                padding-top:15px;
+            }
+            #name_value{
+                top:180px;
+                left:-200px;
+                font-size:22px;
+                border: 1px black solid;
+                position: relative;
+                height:35px;
+                margin-left:500px;
+            }
+            #email_value{
+                position:absolute;
+                top:220px;
+                left:-200px;
+                font-size:22px;
+                border: 1px black solid;
+                position: relative;
+                height:35px;
+                margin-left:500px;
             }
             
         </style>
@@ -29,7 +55,7 @@
             <p id="name">Name</p>
             <p id="name_value">{{name}}</p>
             <p id="email">Email</p>
-            <p id="email_value>">{{email}}</p>
+            <p id="email_value">{{email}}</p>
         </div>
         <!--
         <table class="table table-bordered" id = "Profile_Table">
@@ -52,5 +78,5 @@
     -->
         
    {% endif %}
-    
 {% endblock content %}
+    

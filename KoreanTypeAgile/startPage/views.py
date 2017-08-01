@@ -160,13 +160,14 @@ def Signup(request) :
     except:
         userdata=User(name = name,email = email,password = password)
     
-    if User.objects.filter(email=email).exists() is False :
-        userdata.save()
-    
+        
     userdatas=User.objects.all()
     userdatas={'userdatas':userdatas}
-    
-    if User.objects.filter(email=email).exists() :
+    if User.objects.filter(email=email).exists() is False :
+        userdata.save()
+        return render(request,'startPages/index.html',userdatas) 
+    check_dum=User.objects.filter(email=email).exists() 
+    if check_dum == True :
         messages.error(request,"이미 존재하는 이메일 입니다.")
         return render(request,'startPages/signUpPage.html',userdatas) 
     return render(request,'startPages/index.html',userdatas)
@@ -181,8 +182,8 @@ def Signin(request):
         
         if check_password is True :
             request.session['userid']=input_email
-            userdatas={'email' :input_email,'password':input_password}
-            return render(request,'startPages/top_navi/homepage.html',userdatas)
+            #userdatas={'email' :input_email,'password':input_password}
+            return render(request,'startPages/top_navi/homepage.html')
         
         elif check_password is False :
             messages.error(request,"비밀번호가 일치하지 않습니다.")
