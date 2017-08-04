@@ -195,6 +195,7 @@ def Signin(request):
     return render(request,'startPages/index.html',userdatas)
    
 def brain_stroming(request):
-    return render(request,'startPages/left_navi/brain_stroming.html')
+    content=BrainStorm.objects.all()
+    return render(request,'startPages/left_navi/brain_stroming.html',content)
 
     

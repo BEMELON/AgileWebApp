@@ -1,9 +1,25 @@
 {% extends "logged_in_page_base.html" %}
 
 {% block content %}
+    <div class="BrainStorm">
+        <style>
+            #project_name{
+                border:1px black dotted;
+            }        
+        </style>
+        <head>
+            <h1 id="project_name">{{project_name}}</h1>
+            
+        </head>
+        <body>
+            <table>
+                <tr>
+                    <th>아이디어</th>
+                </tr>
+                {% if !idea %}
+                <h1>아직 브레인스토밍을 시작하지 않았습니다!</h1>>
 
-   
-    <h1>brain stroming page</h1>
-    <p>There is the site which hope for your brilliant paln.</p>
+            </table>
+    </div>
     
 {% endblock content %}

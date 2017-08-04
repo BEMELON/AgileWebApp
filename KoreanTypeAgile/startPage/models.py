@@ -15,9 +15,9 @@ class Project(models.Model):
     big_project_name = models.CharField(max_length=40, default='')
     project_member = models.CharField(max_length=40, default='')
     project_contents = models.CharField(max_length=40, default='')
-
+    
     def __str__(self):
-        return self.project_name
+        return self.big_project_name
 
 
 class Todo(models.Model):
@@ -44,3 +44,9 @@ class Issue(models.Model):
     issue_contents = models.CharField(max_length=40)
     person_created = models.CharField(max_length=40)
     commit = models.CharField(max_length=40)
+
+
+class BrainStorm(models.Model):
+    #project_name=models.CharField(max_length=40, default='')
+    ideas=models.TextField(default='')
+    
