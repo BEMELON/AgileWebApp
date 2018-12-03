@@ -11,22 +11,8 @@ make agile web app
     `pip install numpy`  
     `pip install psycopg2`  
 2. 폰트 설정
-    -pytagcloud 모듈 설치가 선행  
-    1. pytagcloud 모듈이 설치된 폴더로 이동해야됩니다.  
-     (C:\Users\사용자계정\AppData\Local\Programs\Python\Python36\Lib\site-packages\pytagcloud)  
-     주로 이폴더에 pytagcloud 설치가 되는데, 사용자마다 위치가 조금씩 다를 수 있습니다.  
-    2. pytagcloud 에서 fonts 폴더로 이동합니다.   
-    3. github에 나눔 글꼴 파일을 같이 올렸습니다. (NanumGothic)  
-     (http://ngio.tistory.com/m/5264 여기서도 받을 수 있습니다.)  
-    4. 나눔글꼴파일(NanumGothic.ttf)를 2번에서의 fonts 폴더에 넣어주고, fonts.json 을 열어줍니다.  
-    5. 적절한 위치?에 아래와 같은 코드를 추가해줍니다.  
-    ```
-    {  
-    "name": "Nanum Gothic",  
-    "ttf": "NanumGothic.ttf",  
-    "web": "http://fonts.googleapis.com/earlyaccess/nanumgothic.css"  
-  	},  
-    ```
+    https://m.blog.naver.com/PostView.nhn?blogId=dudwo567890&logNo=220909500733&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F  
+    
 3. 엑셀 output
 - http://www.hanul93.com/openpyxl-basic/  
 위 사이트를 따라 openyxl설치  
